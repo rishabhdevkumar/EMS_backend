@@ -3,7 +3,6 @@ const bcrypt = require("bcrypt");
 
 async function addUser(data) {
 
-    // Hash password
     const hashedPassword = await bcrypt.hash(data.password, 10);
 
     const user = new User({
