@@ -1,6 +1,5 @@
 const departmentService = require("../services/DepartmentService");
 
-// ➕ Add Department
 async function addDepartment(req, res) {
     try {
         const department = await departmentService.addDepartment(req.body);
@@ -10,7 +9,6 @@ async function addDepartment(req, res) {
     }
 }
 
-// 📄 Get All Departments
 async function getAllDepartments(req, res) {
     try {
         const departments = await departmentService.getDepartments();
@@ -20,7 +18,6 @@ async function getAllDepartments(req, res) {
     }
 }
 
-// ✏️ Update Department
 async function updateDepartment(req, res) {
     try {
         const updated = await departmentService.editDepartment(
@@ -33,7 +30,6 @@ async function updateDepartment(req, res) {
     }
 }
 
-// ❌ Delete Department
 async function deleteDepartment(req, res) {
     try {
         await departmentService.removeDepartment(req.params.id);
