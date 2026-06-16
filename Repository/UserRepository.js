@@ -12,8 +12,13 @@ async function getAllUsers() {
   return await User.find().select("-password");
 }
 
+async function findUserById(userId) {
+  return await User.findById(userId).select("-password");
+}
+
 module.exports = {
   findUser,
   createUser,
   getAllUsers,
+  findUserById,
 };
